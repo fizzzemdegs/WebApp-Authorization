@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1>Hello {{ user_name }}! You are logged in.</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.file() }}
+        {{ form.submit }}
+    </form>
+    <a href="{{url_for('logout')}}">Press here to logout</a>
+    <br/>
+    {% if imglist %}
+        {% for img in imglist %}
+            <img src = {{img.imgpath}} style="width: 400px;"/> <br/>
+        {% endfor %}
+{% endif %}
+
+
+    
+    
+</body>
+
+</html>

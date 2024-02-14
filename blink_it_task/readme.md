@@ -1,0 +1,65 @@
+
+# Problem Statement 1 : Web App
+
+Create a simple web application that allows users to sign up, log in, and upload images. Implement basic authentication and authorization mechanisms to ensure secure access to user data. 
+
+
+
+## API Reference
+
+#### Login
+
+```http
+  GET POST /login
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `username` | `string` | **Required**. Your username |
+| `password` | `password` | **Required**. Your password |
+
+#### Register
+
+```http
+  GET POST /register
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `username` | `string` | **Required**. Your username |
+| `password` | `password` | **Required**. Your password |
+
+#### Dashboard
+
+```http
+  POST /register
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `image` | `file` | **Optional**. File to be uplaoded |
+
+
+
+
+
+## Deployment
+
+To install all the requirements
+
+```bash
+  pip install -r requirements.txt
+```
+
+
+To deploy this project run
+
+```bash
+  python app.py
+```
+
+
+## Authors
+
+- [Fardin Hossain](https://www.github.com/fizzzemdegs)
+
