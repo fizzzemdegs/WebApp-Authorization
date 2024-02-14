@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'thisisasecretkey'
-app.config["UPLOAD_FOLDER"] = '../static/images'
+app.config["UPLOAD_FOLDER"] = 'static/images'
 
 
 login_manager = LoginManager()
